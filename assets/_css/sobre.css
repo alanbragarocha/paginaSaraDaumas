@@ -1,0 +1,296 @@
+/* Define estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background: #fafafa;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Define estilos para a barra de navegação */
+.container-menu {
+    display: flex;
+    align-items: center;
+    background: #5E7053;;
+    padding: 1rem;
+}
+.minha-logo img {
+    width: 6.25rem;
+    height: auto;
+    border-radius: 410px;        
+}
+
+@media screen and (max-width: 1024px) {
+    .container-menu {
+        flex-direction: column;
+    }
+    .minha-logo img {
+        margin-bottom: 1rem;
+    }
+    
+}
+.nome {
+    color: #fff;
+    padding:  1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+}
+
+.menu {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.menu ul li {
+    display: inline;
+    margin-right: 1.25rem;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu ul {
+        display: block;
+    }
+    .menu ul li {
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
+   
+
+/* Define estilos para a seção "Sobre" */
+.minha-foto img {
+    text-decoration: none;
+    width: 25%;
+    float: left;
+    padding: 1rem;
+    margin: 0;
+    margin-bottom: 0;
+    border-radius: 20px;      
+}
+
+.container-sobre {
+    float: right;
+    display: flex;
+    padding: 1rem;
+    text-align: justify;
+
+}
+@media screen and (max-width: 1024px) {
+    .minha-foto img {
+        width: 100%;
+        float: none;
+    }
+    .container-sobre {
+        flex-direction: column;
+    }
+    
+}
+.texto  {
+    padding: 1rem;
+    text-align: justify;
+    margin-left: 10px; /* Ajuste o valor conforme necessário para separar o texto da imagem */
+}
+
+.titulo {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.texto p {
+    padding: 1rem;
+    margin-bottom: 1rem;
+   
+}
+@media screen and (max-width: 1024px) {
+    .texto {
+        padding: 1rem;
+    }
+    .titulo {
+        padding: 1rem;
+    }
+    
+}
+/* Estilo para botão contado  */
+.btn-contato {
+    margin-bottom: 25px;
+    text-align: center;
+    margin-top: 20px;
+    
+}   
+
+button{
+    background:#0000004f;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    border-radius: 0.5rem;
+  }
+  .btn-contato a {
+    text-decoration: none;
+    color: #fff;
+  }
+  button:hover{
+    background:#0000004f;
+    color:#0000004f;
+  }
+  button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #0000004f;
+    transition:400ms ease all;
+  }
+  button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+
+
+/* Estilos para o footer */
+
+
+.container-footer{
+    background-color: #5E7053;
+    max-width: 1400px;
+    padding: 0 14%;
+    margin: auto;
+}
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+        padding:2rem ;
+        font-size: 22px;
+        color: white;
+        margin-bottom: 20px;
+        font-weight: 500;
+        position: relative;
+        text-transform: uppercase;
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li{
+    margin: 10px 0;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #cecdcd;
+    padding-left: 10px;
+}
+.footer-col .medias-socias{
+    margin-top: 30px;
+}
+.footer-col .medias-socias a{
+    position: relative;
+    left: 2.5rem;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.footer-col .medias-socias a img{
+    position: relative;
+    top: -3rem;
+    left: 2rem;
+    width: 4rem;
+    height: auto;
+    padding: 0.5rem;
+    font-size: 20px;
+}
+    /* Responsivo */
+@media (max-width: 800px) {
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:600px) {
+    .footer-col{
+        width: 100%;
+    }
+}
+.float-whatsapp {
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+    font-size: 14px;
+}
+
+.float-whatsapp.float-on {
+  position: fixed;
+}
+
+.float-whatsapp a {
+    background: #008617;
+    padding: 2rem;
+    border-radius: 100px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.float-whatsapp svg {
+    height: 16px;
+    margin-bottom: -2px;
+}
+.icon-whatsapp {
+    position: relative;
+    top: 1rem;
+     width: 3rem;
+
+}

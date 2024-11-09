@@ -1,0 +1,729 @@
+/* Define estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background: #fafafa;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Define estilos para a barra de navegação */
+.container-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem;
+    background-color: #516752;
+    position: sticky;
+    top: 0;
+    height: 2rem;
+}
+
+/* Estilo do logotipo */
+.logo img {
+    width: 10rem;
+    position: relative;
+    right: 5rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+/* Estilo do menu */
+.menu ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 1.5rem;
+}
+
+.menu ul li a {
+    font-size:1.5rem;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+
+/* Estilo do botão de menu para dispositivos móveis */
+#menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-button img {
+    text-align: right;
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsividade */
+@media (max-width: 760px) {
+    .container-menu {
+        flex-direction: row;
+        height: 100%;
+        padding: 1rem 0;
+        width: 100%;
+    }
+    
+    .logo img {
+        width: 7rem;
+        position: relative;
+        right: 0;
+    }
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        background-color: var(--cor-navi);
+    }
+
+    .menu ul li {
+        width: 100%;
+        margin: 0;
+        padding: 1rem 1.5rem;
+    }
+
+    .menu.menu-open ul {
+        display: flex;
+    }
+    #menu-button {
+        display: block;
+        position: absolute;
+        top: 10px; /* Ajuste conforme necessário */
+        right: 10px; /* Ajuste conforme necessário */
+        border: 1px solid #ccc; /* Ajuste conforme necessário */
+        padding: 10px; /* Ajuste conforme necessário */
+    }
+}
+
+/* Define estilos para a seção "bio" */
+
+.sobre .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+
+.sobre .image img{
+    position: relative;
+    left: 1rem;
+    margin-top: 5rem;
+    width: 15rem;
+    border-radius: 22rem;
+}
+
+.sobre .content{
+    flex: 1 1 55rem;
+}
+
+.sobre .content h2{
+   font-size: 2rem;
+   text-align: center;
+}
+
+.sobre  p{
+    position: relative;
+    left: rem;
+    font-size: 1.0rem;
+    line-height: 1.6;
+    padding-bottom: 1rem;
+}
+@media screen and (max-width: 760px) {
+    .sobre .image img{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        width: 50%;
+        float: none;
+
+    }
+ .sobre  p{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 1.0rem;
+    line-height: 1.6;
+    padding-bottom: 1rem;
+
+ }
+    
+}
+.saiba button{
+    position: relative;
+    left: 2rem;
+    background-color: #0000004f;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.0rem;
+    transition: all 0.3s ease;
+}   
+.sobre .content .sobre-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+    
+
+@media screen and (max-width: 760px) {
+    .sobre .content .sobre-info{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sobre .image img{
+        margin-top: 2rem;
+    }
+    
+}
+.info .tempo-habilidades{
+    font-size: 1.0rem;
+    display: inline-block;
+    font-weight: 400;
+    
+}
+@media screen and (max-width: 1024px) {
+    .info .tempo-habilidades{
+        position: relative;
+        left: 2rem;
+        top: -1.1rem;
+        display: block;
+
+        text-align: center;
+    }
+    
+}
+
+.sobre .content .sobre-info .info h4{
+    font-size: 1.0rem;
+    padding-bottom: 1rem;
+}
+
+.sobre .content .sobre-info .info span{
+    font-size: 1.0rem;
+    font-weight: 400;
+   
+}
+
+.counting{
+    margin-left: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+}
+
+.counting .box{
+    width: 10rem;
+    text-align: center;
+    background-color: #0000004f;
+    padding: 2rem;
+}
+
+.box p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+}
+@media screen and (max-width: 760px) {
+    .counting{
+        margin-left: 0;
+    }
+    .counting .box{
+        width: 8rem;
+    }
+    .box p{
+        font-size: 1.0rem;
+    }
+}
+
+/* Define estilos para a seção "Sobre" */
+.minha-foto img {
+    width: 25%;
+    float: left;
+    padding: 1rem;
+    margin: 0;
+    margin-bottom: 0;
+    border-radius: 20px;      
+}
+@media screen and (max-width: 1024px) {
+    .minha-foto img {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+/* como posso te ajudar */
+.ajuda-section h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.servico-coluna{
+    margin: 0 auto;
+    margin-bottom: 1rem; /* Adiciona uma margem inferior para separar as colunas */
+    padding: 1rem; /* Adiciona preenchimento interno */
+    border: 1px solid #ccc; /* Adiciona uma borda */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    box-sizing: border-box; /* Garante que a largura inclua a espessura da borda */
+}
+
+@media screen and (max-width: 1024px) {
+    .servico-coluna {
+        width: 100%;
+    }
+    
+}
+.como-posso-ajudar {
+    display: flex;
+    text-align: center  ;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.servico-coluna, .servico-cliuna {
+    width: calc(50% - 1rem); /* Subtrai 1rem de margem entre as colunas */
+    margin-bottom: 1rem; /* Adiciona uma margem inferior para separar as colunas */
+    padding: 1rem; /* Adiciona preenchimento interno */
+    border: 1px solid #ccc; /* Adiciona uma borda */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    border-radius: 50rem;
+    box-sizing: border-box; /* Garante que a largura inclua a espessura da borda */
+}
+@media screen and (max-width: 1024px) {
+    .servico-coluna {
+        width: 100%;
+    }
+    
+}
+/* Estilo para a seção de ansiedade */
+.ansiedade {
+    margin: 20px 0;
+}
+
+.coluna-demanda {
+    border-radius: 50rem;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.titulo-demanda  {
+    text-align: center; /* Altere para 'left' ou 'right' conforme necessário */
+}
+.coluna-demanda ul  {
+   text-align: center;
+}
+
+.ansiedade .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ansiedade .coluna-demanda {
+    width: calc(50% - 1rem); /* Subtrai 1rem de margem entre as colunas */
+    margin-bottom: 1rem; /* Adiciona uma margem inferior para separar as colunas */
+    padding: 1rem; /* Adiciona preenchimento interno */
+    border: 1px solid #ccc; /* Adiciona uma borda */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    box-sizing: border-box; /* Garante que a largura inclua a espessura da borda */
+}
+
+.ansiedade .coluna-demanda  {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.ansiedade ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ansiedade li {
+    margin-bottom: 5px;
+}
+
+.ansiedade li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.ansiedade li a:hover {
+    text-decoration: underline;
+}
+
+/* Início da area ansiedade*/
+
+.titulo-ansiedade  {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.ansiedade  {
+    margin-left: 10rem ;
+    margin-right: 10rem;
+    text-align: center;
+    margin-top: 0;
+}
+@media screen and (max-width: 1024px) {
+    .ansiedade {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+}
+.ansiedade .row {
+    display: flex;
+    justify-content: space-between;
+}
+.ansiedade .coluna-demanda {
+    width: 40%;
+}
+
+
+.ansiedade .coluna-demanda h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.ansiedade ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ansiedade li {
+    margin-bottom: 5px;
+}
+
+.ansiedade li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.ansiedade li a:hover {
+    text-decoration: underline;
+}
+/*Início das demandas*/ 
+.demanda {
+    margin: 20px 0;
+}
+
+.demanda {
+    margin: 20px 0;
+}
+
+.container-demanda {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+@media screen and (max-width: 1024px) {
+    .container-demanda {
+        flex-direction: column;
+    }
+    
+}
+.coluna-demanda {
+    width: calc(33.33%  -1rem); /* Subtrai 1rem de margem entre as colunas */
+    margin: 1rem ;
+    margin-bottom: 1rem; /* Adiciona uma margem inferior para separar as colunas */
+    padding: 1rem; /* Adiciona preenchimento interno */
+    border: 1px solid #ccc; /* Adiciona uma borda */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    
+}
+
+.coluna-demanda h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+@media screen and (max-width: 1024px) {
+    .coluna-demanda {
+        width: 100%;
+    }
+    
+}
+/*  Início dos motivos para fazer terapia */
+
+.titulo-terapia  {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.container-motivo {
+    margin: 20px 0;
+}
+@media screen and (max-width: 1024px) {
+    .container-motivo {
+        margin: 20px 0;
+    }
+    
+}
+.listas-numerica {
+    padding-left: 20px; /* Adiciona um recuo à esquerda para a lista */
+    counter-reset: item;
+}
+
+.listas {
+    text-align: center;
+    list-style-type: none; /* Remove o estilo padrão de lista */
+}
+@media screen and (max-width: 1024px) {
+    .listas {
+        text-align: left;
+    }
+    
+}
+
+.listas li {
+    margin-bottom: 10px; /* Adiciona espaço entre os itens da lista */
+    counter-increment: item; /* Incrementa o contador para cada item da lista */
+}
+
+.listas li:before {
+    content: counter(item) ". "; /* Adiciona o número do item seguido de um ponto */
+    font-weight: bold; /* Opcional: torna o número do item em negrito */
+}
+@media screen and (max-width: 1024px) {
+    .listas li:before {
+        content: counter(item) ". "; /* Adiciona o número do item seguido de um ponto */
+        font-weight: bold; /* Opcional: torna o número do item em negrito */
+    }
+    
+}
+
+/* depoimentos  */
+.container-meus-clientes {
+    margin: 20px 0;
+}
+.depoimento-titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.depoimentos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.depoimento {
+    width: calc(33.33% - 10px);
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+@media screen and (max-width: 1024px) {
+    .depoimento {
+        width: 100%;
+    }
+    
+}
+.depoimento + .depoimento {
+    margin-left: 20px;
+}
+
+.texto {
+    margin-top: 0;
+}
+
+.nome {
+    margin-top: 5px;
+    color: #000;
+    font-style: italic;
+}
+
+/* Estilo para botão contado  */
+
+.btn-contato {
+    margin-bottom: 25px;
+    text-align: center;
+    margin-top: 20px;
+    
+}   
+button{
+
+    background:#0000004f;
+    color:#fff;
+    border:none;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    border-radius: 0.5rem;
+  }
+  .btn-contato a {
+    text-decoration: none;
+    color: #fff;
+  }
+  button:hover{
+    background:#0000004f;
+    color:#0000004f;
+  }
+  button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #0000004f;
+    transition:400ms ease all;
+  }
+  button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+/* Estilos para o footer */
+
+.container-footer{
+    background-color: #516752;
+    max-width: 100%;
+    padding: 0 14%;
+    margin: auto;
+}
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+        padding:2rem ;
+        font-size: 22px;
+        color: white;
+        margin-bottom: 20px;
+        font-weight: 500;
+        position: relative;
+        text-transform: uppercase;
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li{
+    margin: 10px 0;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #cecdcd;
+    padding-left: 10px;
+}
+.footer-col  a  img{
+    position: relative;
+    top: -3rem;
+    left: 3rem;
+    width: 4rem;
+    height: auto;
+    padding: 0.5rem;
+    font-size: 20px;
+}
+    /* Responsivo */
+@media screen and (max-width: 760px) {
+    .footer-col {
+        width: 50%;
+    }
+    
+    .footer-col  a  img{
+        position: relative;
+        top: -3rem;
+        left: -9rem;
+        width: 4rem;
+        height: auto;
+        padding: 0.5rem;
+        font-size: 20px;
+    
+    }
+    .footer-col .Siga-me{
+        position: relative;
+        left: -10rem;
+        top: -3rem;
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+    }
+}
+.float-whatsapp {
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+    font-size: 14px;
+}
+
+.float-whatsapp.float-on {
+  position: fixed;
+}
+
+.float-whatsapp a {
+    background: #516752;
+    padding: 2rem;
+    border-radius: 100px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 760px) {
+    .float-whatsapp {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+}
+.float-whatsapp svg {
+    height: 16px;
+    margin-bottom: -2px;
+}
+.icon-whatsapp {
+    position: relative;
+    top: 1rem;
+     width: 3rem;
+
+}
+
+@media screen and (max-width: 760px) {
+    .float-whatsapp {
+        bottom: 20px;
+        right: 20px;
+    }
+
+
+}
