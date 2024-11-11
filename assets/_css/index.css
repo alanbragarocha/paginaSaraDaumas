@@ -10,61 +10,60 @@ body {
     background: #fafafa;
     font-family: Arial, sans-serif;
 }
-
-
-
+html {
+    scroll-behavior: smooth;
+}
 /* Define estilos para a barra de navegação */
+/* Header */
 .container-menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5rem;
+    padding: 2rem 4rem;
     background-color: #516752;
     position: sticky;
     top: 0;
-    height: 2rem;
+    height: 5rem;
+    z-index: 1000; /* Mantém o cabeçalho no topo */
 }
 
 /* Estilo do logotipo */
 .logo img {
-    width: 10rem;
-    position: relative;
-    right: 5rem;
-    padding: 1rem;
-    border-radius: 50%;
+    width: 15rem;
+    max-width: 100%;
 }
 
 /* Estilo do menu */
 .menu ul {
     display: flex;
     align-items: center;
-    padding: 0;
-    margin: 0;
+    gap: 1.5rem;
     list-style: none;
-}
-
-.menu ul li {
-    margin-left: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
 .menu ul li a {
-    font-size:1.5rem;
+    font-size: 1.8rem;
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease;
 }
 
+.menu ul li a:hover {
+    color: #cce3d6; /* Efeito de hover */
+}
 
-/* Estilo do botão de menu para dispositivos móveis */
+/* Botão de menu para dispositivos móveis */
 #menu-button {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
+    outline: none;
 }
 
 #menu-button img {
-    text-align: right;
     width: 24px;
     height: 24px;
 }
@@ -72,41 +71,51 @@ body {
 /* Responsividade */
 @media (max-width: 760px) {
     .container-menu {
+        padding: 1rem 2rem;
         flex-direction: row;
-        height: 100%;
-        padding: 1rem 0;
-        width: 100%;
     }
-    
+
     .logo img {
-        width: 7rem;
+        width: 12rem;
         position: relative;
-        right: 0;
+        float: left;
     }
+
+    /* Menu mobile */
     .menu ul {
-        display: none;
+        display: none; /* Oculto por padrão */
         flex-direction: column;
+        position: absolute;
+        top: 5rem; /* Alinha logo abaixo do header */
+        left: 0;
         width: 100%;
+        background-color: #516752;
         text-align: left;
-        background-color: var(--cor-navi);
+        padding-top: 1rem;
     }
 
     .menu ul li {
         width: 100%;
-        margin: 0;
-        padding: 1rem 1.5rem;
+        padding: 1rem;
+    }
+
+    .menu ul li a {
+        font-size: 1.5rem;
+        display: block;
     }
 
     .menu.menu-open ul {
-        display: flex;
+        display: flex; /* Mostra o menu quando ativado */
     }
+
     #menu-button {
         display: block;
-        position: absolute;
-        top: 10px; /* Ajuste conforme necessário */
-        right: 10px; /* Ajuste conforme necessário */
-        border: 1px solid #ccc; /* Ajuste conforme necessário */
-        padding: 10px; /* Ajuste conforme necessário */
+        position: relative;
+        box-shadow: none;
+        top: 0;
+        right: 0;
+        padding: 0.5rem;
+        border: none;
     }
 }
 
@@ -682,6 +691,9 @@ button{
         font-size: 20px;
     }
 }
+
+
+/* Estilos para o botão flutuante do WhatsApp */
 .float-whatsapp {
     bottom: 80px;
     right: 20px;
